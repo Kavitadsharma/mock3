@@ -12,7 +12,7 @@ bookRoute.post("/Add",async(req,res)=>{
         res.send("Book has been added")
 
     }catch(error){
-        console.log({msg:"error"})
+        console.log({msg:error})
     }
 })
 
@@ -22,7 +22,7 @@ bookRoute.get("/allbook",async(req,res)=>{
         res.send(book)
     }catch(err){
         console.log("error")
-        res.send({msg:"error"})
+        res.send({msg:err})
     }
 })
 
@@ -33,7 +33,7 @@ bookRoute.delete("/book/:id",async(req,res)=>{
         res.send("book has been delete")
     }catch(err){
         console.log('eroor')
-        res.send({msg:"error"})
+        res.send({msg:err})
     }
 })
 
@@ -43,7 +43,7 @@ bookRoute.get("/book/sortbypriceinc",async (req,res)=>{
         res.send(books)
     }catch(error){
         console.log("error")
-        res.send({msg:"error"})
+        res.send({msg:error})
     
     }
 })
@@ -53,7 +53,7 @@ bookRoute.get("/book/sortbypricedec",async (req,res)=>{
         res.send(books)
     }catch(error){
         console.log("error")
-        res.send({msg:"error"})
+        res.send({msg:error})
     
     }
 })
@@ -66,7 +66,7 @@ bookRoute.get("/book/filterbygenre/:genre",async(req,res)=>{
     
       }  catch(error){
             console.log("error")
-            res.send({msg:"error"})
+            res.send({msg:error})
         
         }
 
